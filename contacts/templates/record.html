@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    {% extends 'base.html' %}
+    {% block content %}
+
+    <div class="container mt-4">
+        <div class="card col-md-8 offset-md-2">
+            <!-- <div class="card-header">
+                <h5 class="card-title">{{ contact_record.name }}</h5>
+            </div> -->
+            <div class="card-body">
+                <table class="table table-hover text-center">
+                    <tbody>
+                        <tr class="card-header">
+                            <td><strong>Name</strong></td>
+                            <td>{{ contact_record.name }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nickname</strong></td>
+                            <td>{{ contact_record.nickname }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email</strong></td>
+                            <td>{{ contact_record.email }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mobile Number</strong></td>
+                            <td>{{ contact_record.mobileNumber }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Address</strong></td>
+                            <td>{{ contact_record.address }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>City</strong></td>
+                            <td>{{ contact_record.city }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>State</strong></td>
+                            <td>{{ contact_record.state }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pincode</strong></td>
+                            <td>{{ contact_record.pincode }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Created At</strong></td>
+                            <td>{{ contact_record.created_at }}</td>
+                        </tr>
+                        {% comment %} <tr>
+                            <td><strong>ID</strong></td>
+                            <td>{{ contact_record.id }}</td>
+                        </tr> {% endcomment %}
+                    </tbody>
+                </table>
+                
+
+            </div>
+
+            <div class="card-footer mt-4">
+                <a href="{% url 'home' %}" class="btn btn-secondary w-100 mb-2">Back</a>
+                <a href="{% url 'delete_record' contact_record.id %}" class="btn btn-danger w-100 mb-2">Delete</a>
+                <a href="{% url 'update_record' contact_record.id %}" class="btn btn-warning w-100">Update Record</a>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+{% comment %} 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    {% extends 'base.html' %}
+    {% block content %}
+
+
+
+    <div class="card">
+        <div class="card-header">
+            <strong>{{ contact_record.name }}</strong>
+        </div>
+        <div class="card-body">
+
+
+            <p class="card-text">
+                <strong>Nickname: </strong>{{ contact_record.nickname }}
+            </p>
+
+            <p class="card-text">
+                <strong>Email: </strong>{{ contact_record.email }}
+            </p>
+
+            <p class="card-text">
+                <strong>Mobile Number: </strong>{{ contact_record.mobileNumber }}
+            </p>
+
+            <p class="card-text">
+                <strong>Address: </strong>{{ contact_record.address }}
+            </p>
+
+            <p class="card-text">
+                <strong>City: </strong>{{ contact_record.city }}
+            </p>
+
+            <p class="card-text">
+                <strong>State: </strong>{{ contact_record.state }}
+            </p>
+
+            <p class="card-text">
+                <strong>Pincode: </strong>{{ contact_record.pincode }}
+            </p>
+
+            <p class="card-text">
+                <strong>Create At: </strong>{{ contact_record.created_at }}
+            </p>
+
+            <p class="card-text">
+                <strong>ID: </strong>{{ contact_record.id }}
+            </p>
+
+
+        </div>
+    </div>
+
+    <br /><br />
+    <a href="{% url 'home' %}" class="btn btn-dark">Back</a>
+
+    <a href="{% url 'delete_record' contact_record.id %}" class="btn btn-danger">Delete</a>
+
+    <a href="{% url 'update_record' contact_record.id %}" class="btn btn-warning">Update Record</a>
+
+
+    {% endblock %}
+
+
+</body>
+
+</html> {% endcomment %}

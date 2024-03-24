@@ -1,0 +1,21 @@
+django-admin startproject ContactManagerDjango
+
+python manage.py startapp contacts
+
+pip install mysql
+pip install mysql-connector
+pip install mysql-connector-python
+
+to run mydb.py -->
+    python mydb.py
+
+
+from django.utils import timezone
+
+
+python manage.py migrate
+python manage.py makemigrations
+
+python manage.py createsuperuser
+
+python manage.py runserver

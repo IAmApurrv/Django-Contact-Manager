@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<body>
+
+    {% extends 'base.html' %}
+    {% block content %}
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-info">
+                        <h1 class="text-center">Register</h1>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" action="">
+                            {% csrf_token %}
+                            {% if form.errors %}
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                Your Form Has Errors
+                                {% for field in form %}
+                                {% if field.errors %}
+                                {{ field.errors }}
+                                {% endif %}
+                                {% endfor %}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                            {% endif %}
+
+                            <div class="mb-3">
+                                <label for="id_username" class="form-label">Username</label>
+                                {{ form.username }}
+                            </div>
+                            <div class="mb-3">
+                                <label for="id_name" class="form-label">Name</label>
+                                {{ form.name }}
+                            </div>
+                            <div class="mb-3">
+                                <label for="id_email" class="form-label">Email Address</label>
+                                {{ form.email }}
+                            </div>
+                            <div class="mb-3">
+                                <label for="id_password1" class="form-label">Password</label>
+                                {{ form.password1 }}
+                            </div>
+                            <div class="mb-3">
+                                <label for="id_password2" class="form-label">Confirm Password</label>
+                                {{ form.password2 }}
+                            </div>
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-success w-100 mb-4">Register</button>
+                                <i>Already have an account ?</i>
+                                <a href="{% url 'home' %}" class="btn btn-info">Login</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<body>
+
+
+    {% extends 'base.html' %}
+    {% block content %}
+
+
+    <div class="col-md-6 offset-md-3">
+        <h1>Register</h1>
+        <br />
+
+        <form method="POST" action="">
+            {% csrf_token %}
+            {% if form.errors %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                Your Form Has Errors
+                {% for field in form %}
+                {% if field.errors %}
+                {{ field.errors }}
+                {% endif %}
+                {% endfor %}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endif %}
+
+            {{ form.as_p }}
+
+            <br />
+            <button type="submit" class="btn btn-secondary">Register</button>
+        </form>
+
+
+
+    </div>
+
+    {% endblock %}
+
+
+
+
+</body>
+
+</html> {% endcomment %}
