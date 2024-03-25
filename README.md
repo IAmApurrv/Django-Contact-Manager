@@ -42,29 +42,29 @@ python manage.py runserver
 
 ## Screenshots
 
-![Register](Images/register.png)
 *Register*
+![Register](Images/register.png)
 
-![Login](Images/login.png)
 *Login*
+![Login](Images/login.png)
 
-![Show Contacts 1](Images/show-contacts-1.png)
 *Showing Contacts*
+![Show Contacts 1](Images/show-contacts-1.png)
 
-![Add Contact](Images/add-contact.png)
 *Add Contact*
+![Add Contact](Images/add-contact.png)
 
-![Show Contacts 2](Images/show-contacts-2.png)
 *Showing Contacts Again*
+![Show Contacts 2](Images/show-contacts-2.png)
 
-![Update Contact](Images/update-contact.png)
 *Update Contact*
+![Update Contact](Images/update-contact.png)
 
-![Updated Contact](Images/updated-contact.png)
 *Updated Contact*
+![Updated Contact](Images/updated-contact.png)
 
-![Deleted Contact](Images/deleted-contact.png)
 *Deleted Contact*
+![Deleted Contact](Images/deleted-contact.png)
 
-![Contact Card](Images/contact-card.png)
 *Contact Card*
+![Contact Card](Images/contact-card.png)
